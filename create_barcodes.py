@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 import barcode
 import xml.etree.ElementTree as ET
 
@@ -28,6 +29,8 @@ if(__name__ == '__main__'):
 
 		for c in broot[1:]:
 			group[i].append(c)
+
+	os.remove('barcode.svg')
 
 	ET.register_namespace('','http://www.w3.org/2000/svg')
 	stree.write('output.svg')
