@@ -20,7 +20,7 @@ if(__name__ == '__main__'):
 	sroot = stree.getroot()
 	group = sroot[0]
 
-	for (i, id) in zip(range(3*7), range(start_id, start_id + 3*7)):
+	for (i, id) in zip(range(3*8), range(start_id, start_id + 3*8)):
 		barcode.generate('ean8', str(id), output='barcode')
 
 		btree = ET.parse('barcode.svg')
